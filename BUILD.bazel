@@ -14,15 +14,22 @@ cc_library(
 	defines = [
 	],
 	deps = [
-		"@com_github_bazelboost_utility//:utility",
+		"@com_github_bazelboost_core//:core",
+		"@com_github_bazelboost_type_traits//:type_traits",
 		"@com_github_bazelboost_range//:range",
+		"@com_github_bazelboost_mpl//:mpl",
+		"@com_github_bazelboost_config//:config",
 		"@com_github_bazelboost_bind//:bind",
+		"@com_github_bazelboost_exception//:exception",
+		"@com_github_bazelboost_throw_exception//:throw_exception",
 		"@com_github_bazelboost_tuple//:tuple",
 		"@com_github_bazelboost_assert//:assert",
-		"@com_github_bazelboost_type_traits//:type_traits",
+		"@com_github_bazelboost_static_assert//:static_assert",
+		"@com_github_bazelboost_array//:array",
+		"@com_github_bazelboost_unordered//:unordered",
+		"@com_github_bazelboost_iterator//:iterator",
 		"@com_github_bazelboost_concept_check//:concept_check",
-		"@com_github_bazelboost_config//:config",
-		"@com_github_bazelboost_detail//:detail",
+		"@com_github_bazelboost_function//:function",
 		"@com_github_bazelboost_regex//:regex"
 	],
 )
