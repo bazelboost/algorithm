@@ -21,5 +21,8 @@ cc_library(
     visibility = ["//visibility:public"],
     includes = ["include"],
     hdrs = glob(_public_hdrs),
-    deps = [":algorithm_internal"],
+    deps = [
+        ":algorithm_internal",
+        "@boost//range",
+    ],
 )
