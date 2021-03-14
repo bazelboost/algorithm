@@ -34,5 +34,6 @@ cc_library(
         "@boost//exception",
         "@boost//throw_exception",
         "@boost//tuple",
+        "@boost//function",
     ],
 )
