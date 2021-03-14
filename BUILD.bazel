@@ -14,6 +14,9 @@ _public_hdrs = [
 cc_library(
     name = "algorithm_internal",
     hdrs = glob(["include/boost/**/*.hpp"], exclude = _public_hdrs),
+    deps = [
+        "@boost//array",
+    ],
 )
 
 cc_library(
@@ -24,5 +27,12 @@ cc_library(
     deps = [
         ":algorithm_internal",
         "@boost//range",
+        "@boost//config",
+        "@boost//utility",
+        "@boost//type_traits",
+        "@boost//mpl",
+        "@boost//exception",
+        "@boost//throw_exception",
+        "@boost//tuple",
     ],
 )

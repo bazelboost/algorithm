@@ -1,0 +1,31 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "apply_permutation_example",
+    srcs = ["apply_permutation_example.cpp"],
+    deps = ["//:algorithm"],
+)
+
+cc_binary(
+    name = "clamp_example",
+    srcs = ["clamp_example.cpp"],
+    deps = ["//:algorithm"],
+)
+
+cc_binary(
+    name = "is_palindrome_example",
+    srcs = ["is_palindrome_example.cpp"],
+    deps = ["//:algorithm"],
+)
+
+cc_binary(
+    name = "is_partitioned_until_example",
+    srcs = ["is_partitioned_until_example.cpp"],
+    deps = ["//:algorithm"],
+)
+
+cc_binary(
+    name = "search_example",
+    srcs = ["search_example.cpp"],
+    deps = ["//:algorithm"],
+)
