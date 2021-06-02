@@ -1,0 +1,448 @@
+load("@rules_cc//cc:defs.bzl", "cc_test", "cc_library")
+
+cc_test(
+    name = "all_of_test",
+    srcs = ["all_of_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "any_of_test",
+    srcs = ["any_of_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "apply_permutation_test",
+    srcs = ["apply_permutation_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "clamp_test",
+    srcs = ["clamp_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "copy_if_test1",
+    srcs = ["copy_if_test1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "copy_n_test1",
+    srcs = ["copy_n_test1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "empty_search_test",
+    srcs = ["empty_search_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "equal_test",
+    srcs = ["equal_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "exclusive_scan_test",
+    srcs = ["exclusive_scan_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "find_backward_test",
+    srcs = ["find_backward_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "find_if_not_test1",
+    srcs = ["find_if_not_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "find_not_test",
+    srcs = ["find_not_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "for_each_n_test",
+    srcs = ["for_each_n_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "gather_fail1",
+    tags = ["manual"],
+    srcs = ["gather_fail1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "gather_test1",
+    srcs = ["gather_test1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "hex_fail1",
+    tags = ["manual"],
+    srcs = ["hex_fail1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "hex_test1",
+    srcs = ["hex_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "hex_test2",
+    srcs = ["hex_test2.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "hex_test3",
+    srcs = ["hex_test3.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "hex_test4",
+    srcs = ["hex_test4.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "inclusive_scan_test",
+    srcs = ["inclusive_scan_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "iota_test1",
+    srcs = ["iota_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "is_palindrome_test",
+    srcs = ["is_palindrome_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "is_partitioned_test1",
+    srcs = ["is_partitioned_test1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "is_partitioned_until_test",
+    srcs = ["is_partitioned_until_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "is_permutation_test1",
+    srcs = ["is_permutation_test1.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_library(
+    name = "iterator_test",
+    srcs = ["iterator_test.hpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "mismatch_test",
+    srcs = ["mismatch_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "none_of_test",
+    srcs = ["none_of_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "one_of_test",
+    srcs = ["one_of_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "ordered_test",
+    srcs = ["ordered_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "partition_copy_test1",
+    srcs = ["partition_copy_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "partition_point_test1",
+    srcs = ["partition_point_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "partition_subrange_test",
+    srcs = ["partition_subrange_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "power_fail1",
+    tags = ["manual"],
+    srcs = ["power_fail1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "power_test",
+    srcs = ["power_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "reduce_test",
+    srcs = ["reduce_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+    ],
+)
+
+cc_test(
+    name = "search_fail1",
+    tags = ["manual"],
+    srcs = ["search_fail1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_fail2",
+    tags = ["manual"],
+    srcs = ["search_fail2.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_fail3",
+    tags = ["manual"],
+    srcs = ["search_fail3.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_test1",
+    srcs = ["search_test1.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_test2",
+    srcs = ["search_test2.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_test3",
+    srcs = ["search_test3.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "search_test4",
+    srcs = ["search_test4.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "sort_subrange_test",
+    srcs = ["sort_subrange_test.cpp"],
+    deps = [
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "transform_exclusive_scan_test",
+    srcs = ["transform_exclusive_scan_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "transform_inclusive_scan_test",
+    srcs = ["transform_inclusive_scan_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)
+
+cc_test(
+    name = "transform_reduce_test",
+    srcs = ["transform_reduce_test.cpp"],
+    deps = [
+        ":iterator_test",
+        "//:algorithm",
+        "@boost//libs/test",
+    ],
+)

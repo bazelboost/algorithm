@@ -1,19 +1,12 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
-_public_hdrs = [
-    "include/boost/*.hpp",
-    "include/boost/algorithm/*.hpp",
-    "include/boost/cxx11/*.hpp",
-    "include/boost/cxx14/*.hpp",
-    "include/boost/cxx17/*.hpp",
-    "include/boost/searching/*.hpp",
-    "include/boost/string/*.hpp",
-    "include/boost/string/std/*.hpp",
+_private_hdrs = [
+    "include/boost/**/*/detail/**/*.hpp",
 ]
 
 cc_library(
     name = "algorithm_internal",
-    hdrs = glob(["include/boost/**/*.hpp"], exclude = _public_hdrs),
+    hdrs = glob(_private_hdrs),
     deps = [
         "@boost//libs/array",
     ],
@@ -23,7 +16,7 @@ cc_library(
     name = "algorithm",
     visibility = ["//visibility:public"],
     includes = ["include"],
-    hdrs = glob(_public_hdrs),
+    hdrs = glob(["include/boost/**/*.hpp"], exclude = _private_hdrs),
     deps = [
         ":algorithm_internal",
         "@boost//libs/range",
